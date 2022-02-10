@@ -117,7 +117,7 @@ DocumentId doc_id = ditto.store.collection("people").insert(content);
 
   ```bash
   curl -X POST 'https://<CLOUD_ENDPOINT>/api/v1/collections/people/documents' \
-    --header 'X-HYDRA-CLIENT-ID: AAAAAAAAAAAAAAAAAAAABQ==' \
+    --header 'X-CLIENT-ID: AAAAAAAAAAAAAAAAAAAABQ==' \
     --header 'Content-Type: application/json' \
     --data-raw '{"name": "Susan", "age": 31}'
   ```
@@ -235,7 +235,7 @@ ditto.store.collection("people").insert({{"_id", "123abc"}, { "name", "Susan" },
 
   ```bash
   curl -X POST 'https://<CLOUD_ENDPOINT>/api/v1/collections/people/documents/123abc' \
-    --header 'X-HYDRA-CLIENT-ID: AAAAAAAAAAAAAAAAAAAABQ==' \
+    --header 'X-CLIENT-ID: AAAAAAAAAAAAAAAAAAAABQ==' \
     --header 'Content-Type: application/json' \
     --data-raw '{"name": "Susan", "age": 31}'
   ```
@@ -572,7 +572,7 @@ ditto.store().collection("people")?.update(|x|{
 
   ```bash
   curl -X POST 'https://<CLOUD_ENDPOINT>/api/v1/collections/people/documents/<DOC_ID>' \
-    --header 'X-HYDRA-CLIENT-ID: AAAAAAAAAAAAAAAAAAAABQ==' \
+    --header 'X-CLIENT-ID: AAAAAAAAAAAAAAAAAAAABQ==' \
     --header 'Content-Type: application/json' \
     --data-raw '{"age": 32, "friends": ["Susan"]}'
   ```
@@ -1289,7 +1289,7 @@ ditto.store.collection("people").find_by_id(docId).remove();
 
   ```bash
   curl -X DELETE 'https://<CLOUD_ENDPOINT>/api/v1/collections/people/documents/<doc_id>' \
-    --header 'X-HYDRA-CLIENT-ID: AAAAAAAAAAAAAAAAAAAABQ==' \
+    --header 'X-CLIENT-ID: AAAAAAAAAAAAAAAAAAAABQ==' \
     --header 'Content-Type: application/json' 
   ```
 </TabItem>
